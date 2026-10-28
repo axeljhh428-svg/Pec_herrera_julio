@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<div id="borderimg2">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio de maquetacion julio</title>
+
+    <link rel="stylesheet" href="estilos.css">
+
+    <style>
+   @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+   </style>
+
+    <style>
+    .accordion {
+     background-color: #afa8be;
+     color: #8d243a;
+     cursor: pointer;
+     padding: 18px;
+     width: 100%;
+     border: none;
+     text-align: left;
+     outline: none;
+     font-size: 15px;
+     transition: 0.4s;
+     }
+
+    .active, .accordion:hover {
+     background-color: #afa8be;
+     }
+
+    .panel {
+     padding: 0 18px;
+     background-color: #afa8be ;
+     max-height: 0;
+     overflow: hidden;
+     transition: max-height 0.2s ease-out;
+     }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="amatic-sc-bold">Proyecto Escolar Comunitario (Pec)</h1>
+<nav>
+            <div class="dropdown">
+  <button class="dropbtn"><h2 class="amatic-sc-bold">Temas</h2></button>
+  <div class="dropdown-content">
+     <a href="index.html"><h3>inicio</h3></a>
+    <a href="crisis.HTML"><h3>Crisis y Trastornos</h3></a>
+    <a href="impacto.HTML"><h3>Impacto en el Rendimiento Académico</h3></a>
+    <a href="aislamiento.HTML"><h3>Aislamiento Social y Desconexión Comunitaria</h3></a>
+  </div>
+  </div>
+        </nav>
+    </header>
+    <main>
+     <section>
+        <h1 class="amatic-sc-bold"> Aislamiento Social y Desconexión Comunitaria</h1>
+        <h2 class="amatic-sc-bold">  Reconstruyendo el Tejido Social: De la Apatía a la Conexión</h2>
+        <h2>el origen de la problematica</h2>
+        <p><h3>actualmente nos enfretamos a indices alarmantes de ansiedfad, depresion y riesgo de suicidio en la poblacion estudiantil. Estos factores no son solo cifras; representan crisis emocionales profundas que requieren deteccion oportuna, espacios seguros y atencion especializada inmediata para proteger la vida de ñloa jovenes</p>
+     </section>
+     <section>
+     <button class="accordion"><h2 class="amatic-sc-bold">Detección Oportuna y Señales de Alarma</h2></button>
+     <div class="panel">
+     <p><h3>La intervención temprana reduce drásticamente el riesgo de desenlaces fatales. Es fundamental capacitar a docentes, padres y compañeros para identificar cambios drásticos de conducta</h3></p>
+     <br>
+        <ul>
+          <li><h2>Aislamiento social o retraimiento repentino.</h2></li>
+          <li><h2>Descenso marcado en el rendimiento académico.</h2></li>
+          <li><h2>Comentarios recurrentes de desesperanza, desinterés por el futuro o verbalizaciones explícitas sobre la muerte.</h2></li>
+          <li><h2>Alteraciones graves del sueño (insomnio recurrente) o cambios extremos en la alimentación</h2></li>
+        </ul>
+     </div>
+          <button class="accordion"><h2 class="amatic-sc-bold">Espacios Seguros</h2></button>
+     <div class="panel">
+     <p><h3>Las escuelas e institutos deben transformarse en entornos donde el bienestar emocional sea prioritario, no un tabú. Esto implica:</h3></p>
+     <br>
+        <ul>
+          <li><h3>Implementar programas de concientización para erradicar el estigma que rodea a los trastornos mentales</h3></li>
+          <li><h3>Crear canales de escucha activa y zonas de contención donde los estudiantes puedan expresarse sin temor a ser juzgados o sancionados académicamente.</h3></li>
+          <li><h3>Fomentar el equilibrio integrando actividades recreativas, deportivas y de socialización que actúen como factores de protección frente al estrés cotidiano</h3></li>
+        </ul>
+     </div>
+
+          <button class="accordion"><h2 class="amatic-sc-bold"> Atención Especializada Inmediata</h2></button>
+     <div class="panel">
+     <p><h3>Cuando los esquemas de prevención no son suficientes, la canalización debe ser ágil. Las universidades y centros escolares necesitan robustecer sus redes de psicología interna y, en paralelo, estrechar lazos con servicios psiquiátricos y de urgencias para ofrecer un seguimiento integral y continuo.</h3></p>
+     <br>
+        <ul>
+          <li><h3>Línea de la Vida: Contacto a través de una línea de atención y suicidio y crisis hotline</h3></li>
+          <li><h3>Centros de Atención Ciudadana (Línea de Seguridad y Chat de Confianza del Consejo Ciudadano): Comuníquese con emergency services o líneas de ayuda locales.</h3></li>
+        </ul>
+     </div>
+     
+     </section>
+    </main>
+    <aside>
+      <div id="borderline1">
+      <div class="tarjeta-estadistica">
+      <span class="numero-destacado">50% - 70%</span>
+      <p>de los jóvenes estudiantes manifiesta síntomas relacionados con la ansiedad, el estrés o la depresión.</p>
+      </div>
+      </div>
+    </aside>
+    <footer>
+        <p>&copy; 2026 julio Todos los derechos reservados</p>
+    </footer>
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" id="btn-subir" title="Volver arriba">
+     ▲
+    </button>
+
+    <script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+</body>
+</div>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<div id="borderimg2"
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio de maquetacion julio</title>
+
+    <link rel="stylesheet" href="estilos.css">
+
+       <style>
+   @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+   </style>
+
+    <style>
+    .accordion {
+     background-color: #afa8be;
+     color: #8d243a;
+     cursor: pointer;
+     padding: 18px;
+     width: 100%;
+     border: none;
+     text-align: left;
+     outline: none;
+     font-size: 15px;
+     transition: 0.4s;
+     }
+
+    .active, .accordion:hover {
+     background-color: #afa8be;
+     }
+
+    .panel {
+     padding: 0 18px;
+     background-color: #afa8be ;
+     max-height: 0;
+     overflow: hidden;
+     transition: max-height 0.2s ease-out;
+     }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="amatic-sc-bold">Proyecto Escolar Comunitario (Pec)</h1>
+<nav>
+            <div class="dropdown">
+  <button class="dropbtn"><h2 class="amatic-sc-bold">Temas</h2></button>
+  <div class="dropdown-content">
+     <a href="index.html"><h3>inicio</h3></a>
+    <a href="crisis.HTML"><h3>Crisis y Trastornos</h3></a>
+    <a href="impacto.HTML"><h3>Impacto en el Rendimiento Académico</h3></a>
+    <a href="aislamiento.HTML"><h3>Aislamiento Social y Desconexión Comunitaria</h3></a>
+  </div>
+  </div>
+        </nav>
+    </header>
+    <main>
+     <section>
+        <h1 class="amatic-sc-bold">Impacto en el Rendimiento Académico</h1>
+        <h2 class="amatic-sc-bold"> Bienestar Emocional y Éxito Escolar</h2>
+        <h3>La manifestacion en el Aula</h3>
+        <p><h3>El bienestar emocional esta directamente ligado a la capacidad de aprendizaje. La carga de los trastornos mentales se traduce visiblemente en un bajo rendimiento academico, dificultades de concentracion, ausentismo y reprobacion, demostrando que un alumno estresado o deprimido no puede aprender al maximo</h3></p>
+     </section>
+     <br>
+     <section>
+     <button class="accordion"><h2 class="amatic-sc-bold">Bloqueo cognitivo:</h2></button>
+     <div class="panel">
+     <p><h3>• El cortisol y la adrenalina (hormonas del estrés) saturan la amígdala cerebral, lo que debilita las funciones de la corteza prefrontal, encargada de la memoria de trabajo, la atención y el razonamiento lógico.
+     </h3></p>
+     </div>
+    <button class="accordion"><h2 class="amatic-sc-bold">Falta de energía:</h2></button>
+     <div class="panel">
+     <p><h3> La depresión altera los neurotransmisores como la dopamina y la serotonina, disminuyendo drásticamente la motivación intrínseca y el interés por aprender.</h3></p>
+     </div>
+    <button class="accordion"><h2 class="amatic-sc-bold">Efecto dominó:</h2></button>
+     <div class="panel">
+     <p><h3> Esto se traduce de forma inmediata en las consecuencias que mencionas: lagunas mentales en los exámenes, falta de concentración en clase y, eventualmente, el ausentismo y la reprobación.</h3></p>
+     </div>
+     </section>
+    </main>
+    <aside>
+        <div id="borderimg1">
+            <h3>el bienestar emocional es el cimiento del éxito académico.</h3>
+            <p>Cuando un estudiante experimenta niveles elevados de estrés, ansiedad o depresión, su cerebro entra en un "modo de supervivencia".</p>
+        </div>
+    </aside>
+    <footer>
+        <p>&copy; 2026 julio Todos los derechos reservados</p>
+    </footer>
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" id="btn-subir" title="Volver arriba">
+     ▲
+    </button>
+
+    <script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+</body>
+</div>
+</html>
